@@ -1,0 +1,78 @@
+✅ Cómo correr tu calculadora en VS Code
+1. Abre VS Code
+Haz doble clic en el ícono de Visual Studio Code para abrirlo.
+
+2. Crea un nuevo archivo
+Ve a Archivo > Nuevo archivo o presiona Ctrl + N
+
+Guarda el archivo como: calculadora.py (usa Ctrl + S)
+
+Asegúrate de que tenga la extensión .py y no .txt
+
+3. Escribe o pega el código
+Pega este código en tu archivo:
+
+python
+Copiar
+Editar
+def suma(a, b):
+    return a + b
+
+def resta(a, b):
+    return a - b
+
+def multiplicar(a, b):
+    return a * b
+
+def dividir(a, b):
+    if b == 0:
+        return "Error: no se puede dividir entre 0"
+    return a / b
+
+def menu():
+    print("\n--- Calculadora Básica ---")
+    print("1. Sumar")
+    print("2. Restar")
+    print("3. Multiplicar")
+    print("4. Dividir")
+    print("5. Salir")
+
+while True:
+    menu()
+    opcion = input("Selecciona una opción (1-5): ")
+
+    if opcion == '5':
+        print("¡Hasta luego!")
+        break
+
+    try:
+        num1 = float(input("Ingresa el primer número: "))
+        num2 = float(input("Ingresa el segundo número: "))
+    except ValueError:
+        print("Error: Debes ingresar solo números.")
+        continue
+
+    if opcion == '1':
+        print(f"Resultado: {suma(num1, num2)}")
+    elif opcion == '2':
+        print(f"Resultado: {resta(num1, num2)}")
+    elif opcion == '3':
+        print(f"Resultado: {multiplicar(num1, num2)}")
+    elif opcion == '4':
+        print(f"Resultado: {dividir(num1, num2)}")
+    else:
+        print("Opción no válida.")
+4. Instala la extensión de Python (si no la tienes)
+Ve al ícono de Extensiones en la barra lateral izquierda (o presiona Ctrl + Shift + X)
+
+Busca Python (de Microsoft)
+
+Instálala
+
+5. Ejecuta tu código
+Una vez que guardaste el archivo:
+
+Haz clic en el botón de "Run" (flecha verde en la parte superior derecha)
+O
+
+Presiona Ctrl + F5 para ejecutarlo sin depurar
