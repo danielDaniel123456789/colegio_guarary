@@ -1,4 +1,4 @@
-# calculadora.py
+# sumar.py
 
 # Define una función llamada 'sumar' que recibe dos parámetros (a y b)
 # y devuelve la suma de ambos
